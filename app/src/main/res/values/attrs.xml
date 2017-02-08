@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PointToPointProgressBar">
+        <attr name="pointToPointProgressBar_backgroundColor" format="color" />
+        <attr name="pointToPointProgressBar_foregroundColor" format="color" />
+        <attr name="pointToPointProgressBar_pointSize" format="dimension" />
+        <attr name="pointToPointProgressBar_barLineThickness" format="dimension" />
+
+        <attr name="pointToPointProgressBar_currentPointNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+        </attr>
+
+        <attr name="pointToPointProgressBar_maximumNumberOfPoints" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+        </attr>
+
+    </declare-styleable>
+
+</resources>
