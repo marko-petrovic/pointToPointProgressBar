@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Point To Point Progress Bar Sample</string>
+    <string name="button_decrement_title">previous</string>
+    <string name="button_increment_title">next</string>
 </resources>

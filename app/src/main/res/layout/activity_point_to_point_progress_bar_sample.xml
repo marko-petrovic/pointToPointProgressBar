@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_point_to_point_progress_bar_sample"
     android:layout_width="match_parent"
@@ -10,5 +11,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dualquo.te.pointtopointprogressbar.PointToPointProgressBarSampleActivity">
 
+    <com.dualquo.te.pointtopointprogressbar.PointToPointProgressBarView
+        android:id="@+id/point_to_point_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:pointToPointProgressBar_backgroundColor="@color/colorPrimary"
+        app:pointToPointProgressBar_barLineThickness="4dp"
+        app:pointToPointProgressBar_currentPointNumber="one"
+        app:pointToPointProgressBar_foregroundColor="@color/colorAccent"
+        app:pointToPointProgressBar_maximumNumberOfPoints="four"
+        app:pointToPointProgressBar_pointSize="12dp" />
+
+    <Button
+        android:id="@+id/button_decrement_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/button_decrement_title" />
+
+    <Button
+        android:id="@+id/button_increment_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/button_increment_title" />
 
 </RelativeLayout>

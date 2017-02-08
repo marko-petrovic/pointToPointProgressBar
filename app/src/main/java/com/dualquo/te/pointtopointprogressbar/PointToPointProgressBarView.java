@@ -28,7 +28,7 @@ public class PointToPointProgressBarView extends View {
             this.pointValue = pointValue;
         }
 
-        public int getPoint() {
+        public int getIntValue() {
             return pointValue;
         }
     }
@@ -138,8 +138,8 @@ public class PointToPointProgressBarView extends View {
         barLineThickness = DEFAULT_BAR_LINE_THICKNESS;
         spacingOffset = DEFAULT_SPACING_OFFSET;
 
-        maximumNumberOfPoints = Point.FOUR.getPoint();
-        currentPointNumber = Point.ONE.getPoint();
+        maximumNumberOfPoints = Point.FOUR.getIntValue();
+        currentPointNumber = Point.ONE.getIntValue();
     }
 
     private Paint initPaint(float strokeWidth, int color) {
@@ -154,12 +154,19 @@ public class PointToPointProgressBarView extends View {
     /**
      * Sets current point on the bar line, then invalidates the view.
      *
-     * @param currentPoint {@link Point} that is being set.
+     * @param currentPoint {@link Point}'s int value that is being set.
      */
-    public void setCurrentPointNumber(Point currentPoint) {
-        validatePointNumber(currentPoint.getPoint());
-        this.currentPointNumber = currentPoint.getPoint();
+    public void setCurrentPointNumber(int currentPoint) {
+        validatePointNumber(currentPoint);
+        this.currentPointNumber = currentPoint;
         invalidate();
+    }
+
+    /**
+     * Returns current point number that is set into progress bar.
+     */
+    public int getCurrentPointNumber() {
+        return currentPointNumber;
     }
 
     @Override
