@@ -193,7 +193,7 @@ public class PointToPointProgressBarView extends View {
 
         int widthOfTheView = getWidth();
         pointToPointWidth = widthOfTheView / (maximumNumberOfPoints - 1);
-        nextPointToPointWidth = pointToPointWidth / 2;
+        nextPointToPointWidth = pointToPointWidth;
     }
 
     /**
@@ -230,8 +230,7 @@ public class PointToPointProgressBarView extends View {
 
         for (int i = 0; i < numberOfLinesToDraw - 1; i++) {
 
-            nextPointToPointWidth += pointToPointWidth;
-            segmentStopPosition = nextPointToPointWidth - (pointToPointWidth);
+            segmentStopPosition = nextPointToPointWidth;
 
             drawingSegmentStartPosition = segmentStartPosition + pointRadius;
             drawingSegmentStopPosition = segmentStopPosition - pointRadius;
@@ -244,6 +243,7 @@ public class PointToPointProgressBarView extends View {
                     paintToDrawWith
             );
 
+            nextPointToPointWidth += pointToPointWidth;
             segmentStartPosition = segmentStopPosition;
         }
 
